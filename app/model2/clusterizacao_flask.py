@@ -111,7 +111,7 @@ app = Flask(__name__)
 
 # Definir a rota para receber as solicitações
 @app.route('/predict_clusterization', methods=['POST'])
-def predict():
+def predict_clusterization():
     data = request.json
     result = predict_cluster(data)
     return jsonify(result)

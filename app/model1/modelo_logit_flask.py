@@ -77,7 +77,7 @@ with open('logistic_model.pkl', 'wb') as model_file:
     pickle.dump((logistic_model, limiar_otimo, x_train.columns.tolist()), model_file)
 
 # Rota para prever a probabilidade de inadimplência
-@app.route('/predict', methods=['POST'])
+@app.route('/predict_logistic_regression', methods=['POST'])
 def predict_logistic_regression():
     # Carregar o modelo treinado e o limiar ótimo
     with open('logistic_model.pkl', 'rb') as model_file:
