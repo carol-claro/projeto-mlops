@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
-from 02_modelo_logit_flask import predict_logistic_regression
-from 05_clusterizacao_flask import predict_clusterization
+from modelo_logit_flask import predict_logistic_regression
+from clusterizacao_flask import predict_clusterization
 
 app = Flask(__name__)
 
