@@ -13,5 +13,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copia todo o conteúdo do diretório atual para o diretório de trabalho no contêiner
 COPY . .
 
+# Expor a porta em que o Flask está sendo executado
+EXPOSE 5000
+
 # Comando para executar o aplicativo quando o contêiner for iniciado
 CMD ["python", "main.py"]
